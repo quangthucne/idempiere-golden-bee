@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Callout
+Bundle-SymbolicName: org.goldenbee.callout
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.adempiere.base;bundle-version="13.0.0",
+ org.adempiere.plugin.utils;bundle-version="13.0.0"
+Automatic-Module-Name: org.goldenbee.callout
+Bundle-RequiredExecutionEnvironment: JavaSE-17
