@@ -18,6 +18,7 @@
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     overflow: hidden;
     min-height: 550px;
+    border: 2px solid #000000;
 }
 
 /* Left Section - Branding */

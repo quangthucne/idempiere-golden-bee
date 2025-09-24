@@ -9,4 +9,11 @@
 	</parent>
 	<artifactId>org.idempiere.zk.goldenbee.theme</artifactId>
 	<packaging>eclipse-plugin</packaging>
+	<dependencies>
+		<dependency>
+			<groupId>org.idempiere</groupId>
+			<artifactId>org.adempiere.ui.zk</artifactId>
+			<version>13.0.0-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 </project>
