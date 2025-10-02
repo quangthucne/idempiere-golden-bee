@@ -95,6 +95,7 @@
     top: unset !important;
     left: unset !important;
     transform: unset !important;
+	padding-left: 4px !important;
 	border-radius: 5px;
 	background-color: #fbcb1b;
 }

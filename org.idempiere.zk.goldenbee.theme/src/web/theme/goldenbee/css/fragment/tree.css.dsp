@@ -3,6 +3,8 @@
 .z-treecell-content {
 	${fontFamilyC};
 	${fontSizeM};
+	line-height: 1.2em !important;
+	padding: 4px 2px !important;
 }
 @media screen and (min-width: 768px) {
 	.z-treecell-content {

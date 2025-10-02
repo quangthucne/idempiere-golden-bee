@@ -1,8 +1,8 @@
 <%@ taglib uri="http://www.idempiere.org/dsp/web/util" prefix="u" %>
 <%-- header --%>
 .desktop-north {
-	background-color: #C7E8FF;
-	border-bottom: 1px solid #ADDDFF !important;
+	background-color: #ffffff !important;
+	border-bottom: 1px solid #ffffff !important;
 }
 <%-- left panel for logo and global search --%>
 .desktop-header-left {
@@ -14,7 +14,7 @@
 }
 
 .desktop-header {
-	background-color: ${u:sysConfig("ZK_DESKTOP_HEADER_BACKGROUND_COLOR", "#C7E8FF")}; <%-- SysConfig with default to #C7E8FF --%>
+	background-color: ${u:sysConfig("ZK_DESKTOP_HEADER_BACKGROUND_COLOR", "#ffffff")}; <%-- SysConfig with default to #C7E8FF --%>
 	width: 100%;
 	height: 46px;
 	padding-left: 4px;
@@ -41,7 +41,7 @@
 	right: 1px;
 }
 .desktop-header-popup, .desktop-header-popup > .z-window-content {
-	background-color: #C7E8FF;
+	background-color: #fbcb1b !important;
 }
 
 .desktop-header-popup .desktop-header {
@@ -66,14 +66,14 @@
     height: auto;
 }
 .desktop-user-panel .z-toolbarbutton:hover {
-	background: #e0f2ff;
+	background: #fbcb1c;
 	color: rgba(0,0,0,0.9);
 }
 .desktop-header-username {
 	padding: 0px 4px;
 }
 .desktop-header-username:hover {
-	background: #e0f2ff;
+	background: #fbcb1b;
 	color: rgba(0,0,0,0.9);
 }
 

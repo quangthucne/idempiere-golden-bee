@@ -88,7 +88,7 @@
 }
 .z-toolbarbutton-checked {
     color: #fff !important;
-    background-color: #7ac8ff !important;
+    background-color: #fbcb1b !important;
 }
 .z-toolbarbutton[disabled], .z-toolbarbutton[disabled]:hover {
 	background-color: transparent;

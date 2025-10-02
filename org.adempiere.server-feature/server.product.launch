@@ -341,6 +341,7 @@
         <setEntry value="org.eclipse.jetty.proxy@default:default"/>
         <setEntry value="org.eclipse.jetty.quic.common@default:default"/>
         <setEntry value="org.eclipse.jetty.quic.quic-quiche-common@default:default"/>
+        <setEntry value="org.eclipse.jetty.quic.quic-quiche-foreign@default:default"/>
         <setEntry value="org.eclipse.jetty.quic.quic-quiche-jna@default:true"/>
         <setEntry value="org.eclipse.jetty.quic.server@default:default"/>
         <setEntry value="org.eclipse.jetty.rewrite@default:default"/>
@@ -513,7 +514,7 @@
         <setEntry value="org.apache.ecs@default:default"/>
         <setEntry value="org.compiere.db.oracle.provider@default:default"/>
         <setEntry value="org.compiere.db.postgresql.provider@default:default"/>
-        <setEntry value="org.goldenbee.callout@default:true"/>
+        <setEntry value="org.goldenbee.callouts@default:true"/>
         <setEntry value="org.idempiere.felix.webconsole@default:true"/>
         <setEntry value="org.idempiere.hazelcast.service@default:default"/>
         <setEntry value="org.idempiere.javadoc@default:default"/>

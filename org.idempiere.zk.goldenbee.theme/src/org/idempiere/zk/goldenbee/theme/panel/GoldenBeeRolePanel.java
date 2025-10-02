@@ -38,33 +38,25 @@ public class GoldenBeeRolePanel extends RolePanel {
     @Override
     protected void createUI() {
 
-        // Main container
+        // Main container với background gradient
         Div mainContainer = new Div();
         mainContainer.setSclass("goldenbee-role-main");
 
-        // Centered card
+        // Card container
         Div cardContainer = new Div();
         cardContainer.setSclass("goldenbee-role-card-container");
 
-        // Card
+        // Card chính - Split layout
         Div card = new Div();
         card.setSclass("goldenbee-role-card");
 
-        // Header với logo và title
-        Div header = createCardHeader();
-        card.appendChild(header);
+        // Left Section - Welcome (màu vàng đen)
+        Div leftSection = createLeftSection();
+        card.appendChild(leftSection);
 
-        // Welcome message
-        Div welcomeMsg = createWelcomeMessage();
-        card.appendChild(welcomeMsg);
-
-        // Form
-        Div form = createForm();
-        card.appendChild(form);
-
-        // Buttons
-        Div buttons = createButtons();
-        card.appendChild(buttons);
+        // Right Section - Form (màu trắng) - Giữ nguyên các field hiện có
+        Div rightSection = createRightSection();
+        card.appendChild(rightSection);
 
         cardContainer.appendChild(card);
         mainContainer.appendChild(cardContainer);
@@ -74,77 +66,64 @@ public class GoldenBeeRolePanel extends RolePanel {
         callLanguageChanged();
     }
 
-    private Div createCardHeader() {
-        Div header = new Div();
-        header.setSclass("goldenbee-role-header");
+    private Div createLeftSection() {
+        Div leftSection = new Div();
+        leftSection.setSclass("goldenbee-role-left-section");
 
         // Logo
         Image logo = new Image();
         logo.setSrc(ThemeManager.getLargeLogo());
-        logo.setSclass("goldenbee-role-logo");
-        header.appendChild(logo);
+        logo.setSclass("goldenbee-role-left-logo");
+        leftSection.appendChild(logo);
 
-        // Title
-        Label title = new Label("Chọn Vai Trò");
-        title.setSclass("goldenbee-role-title");
-        // header.appendChild(title); không cần hiển thị tilte
+        // Welcome title
+        Label welcomeTitle = new Label("Chào mừng trở lại!");
+        welcomeTitle.setSclass("goldenbee-role-welcome-title");
+        leftSection.appendChild(welcomeTitle);
 
-        return header;
+        // Welcome message
+        Label welcomeMsg = new Label("Chọn vai trò để tiếp tục công việc");
+        welcomeMsg.setSclass("goldenbee-role-welcome-msg");
+        leftSection.appendChild(welcomeMsg);
+
+        return leftSection;
     }
 
-    private Div createWelcomeMessage() {
-        Div welcome = new Div();
-        welcome.setSclass("goldenbee-role-welcome");
+    private Div createRightSection() {
+        Div rightSection = new Div();
+        rightSection.setSclass("goldenbee-role-right-section");
 
-        Label message = new Label("Chào mừng trở lại! Chọn vai trò để tiếp tục công việc");
-        message.setSclass("goldenbee-role-welcome-message");
-        welcome.appendChild(message);
-
-        return welcome;
-    }
-
-    private Div createForm() {
-        Div form = new Div();
-        form.setSclass("goldenbee-role-form");
-
-        // Tạo grid layout cho form (2 cột trên desktop)
-        Div formGrid = new Div();
-        formGrid.setSclass("goldenbee-role-form-grid");
-
-        // Cột trái
-        Div leftCol = new Div();
-        leftCol.setSclass("goldenbee-role-form-col");
+        // Form container - Giữ nguyên cấu trúc field như hiện tại
+        Div formContainer = new Div();
+        formContainer.setSclass("goldenbee-role-form-container");
 
         // Client field
-        createFormField(leftCol, lblClient, lstClient, "client");
+        createFormField(formContainer, lblClient, lstClient, "client");
 
         // Role field
-        createFormField(leftCol, lblRole, lstRole, "role");
+        createFormField(formContainer, lblRole, lstRole, "role");
 
         // Organisation field
-        createFormField(leftCol, lblOrganisation, lstOrganisation, "org");
-
-        // Cột phải
-        Div rightCol = new Div();
-        rightCol.setSclass("goldenbee-role-form-col");
+        createFormField(formContainer, lblOrganisation, lstOrganisation, "org");
 
         // Warehouse field
-        createFormField(rightCol, lblWarehouse, lstWarehouse, "warehouse");
+        createFormField(formContainer, lblWarehouse, lstWarehouse, "warehouse");
 
         // Language field
-        createFormField(rightCol, lblLanguage, lstLanguage, "language");
+        createFormField(formContainer, lblLanguage, lstLanguage, "language");
 
         // Date field
-        createDateField(rightCol);
-
-        formGrid.appendChild(leftCol);
-        formGrid.appendChild(rightCol);
-        form.appendChild(formGrid);
+        createDateField(formContainer);
 
         // Default label
-        createDefaultLabel(form);
+        createDefaultLabel(formContainer);
 
-        return form;
+        // Buttons
+        Div buttonsDiv = createButtons();
+        formContainer.appendChild(buttonsDiv);
+
+        rightSection.appendChild(formContainer);
+        return rightSection;
     }
 
     private void createFormField(Div container, Label label, Component field, String fieldType) {
@@ -152,8 +131,10 @@ public class GoldenBeeRolePanel extends RolePanel {
         fieldContainer.setSclass("goldenbee-role-field-container");
 
         // Label
-        label.setSclass("goldenbee-role-label");
-        fieldContainer.appendChild(label);
+        if (label != null) {
+            label.setSclass("goldenbee-role-field-label");
+            fieldContainer.appendChild(label);
+        }
 
         // Input
         Div inputContainer = new Div();
@@ -179,7 +160,7 @@ public class GoldenBeeRolePanel extends RolePanel {
         fieldContainer.setSclass("goldenbee-role-field-container");
 
         // Label
-        lblDate.setSclass("goldenbee-role-label");
+        lblDate.setSclass("goldenbee-role-field-label");
         fieldContainer.appendChild(lblDate);
 
         // Input
@@ -197,7 +178,7 @@ public class GoldenBeeRolePanel extends RolePanel {
         container.appendChild(fieldContainer);
     }
 
-    private void createDefaultLabel(Div form) {
+    private void createDefaultLabel(Div container) {
         Div defaultContainer = new Div();
         defaultContainer.setSclass("goldenbee-role-default-container");
 
@@ -206,7 +187,7 @@ public class GoldenBeeRolePanel extends RolePanel {
         linkContainer.appendChild(lblDef);
 
         defaultContainer.appendChild(linkContainer);
-        form.appendChild(defaultContainer);
+        container.appendChild(defaultContainer);
     }
 
     private Div createButtons() {

@@ -228,8 +228,8 @@
 }
 
 .modern-checkbox-item .z-checkbox-input:checked + .z-checkbox-content::before {
-    background: #007bff;
-    border-color: #007bff;
+    background: #fbcb1b;
+    border-color: #fbcb1b;
 }
 
 /* Animation for popup appearance */

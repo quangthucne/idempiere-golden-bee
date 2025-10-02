@@ -22,6 +22,7 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 }
 
 .z-window-header {
+	background-color: #fbcb1b !important;
 	padding: 4px 6px 4px 9px;
 }
 .z-window-embedded > .z-window-header {

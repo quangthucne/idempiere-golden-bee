@@ -7,17 +7,23 @@
 	height: 100%;
 }
 .z-panel-head {
+	background-color: #fbcb1b !important;
 	padding-bottom: 1px;
 	border: none;
 }
 .z-panel-head .z-panel-header {
+	background-color: #fbcb1b !important;
 	margin-top: 2px;
 	padding: 1px 5px 1px 10px;
     border-bottom: 1px solid #e4e4e4;
 }
+.z-caption {
+	background-color: #fbcb1b !important;
+}
 .z-caption .z-caption-content {
 	cursor: move;
 	padding: 0px;
+	font-weight: 400;
 }
 .z-panel-icon {
 	font-size: 10px !important;

@@ -115,6 +115,11 @@
 	width: 99%; 
 	margin: auto;
 }
+.z-tab-selected {
+	background-color: #fff !important;
+	border-bottom: 2px solid #fbcb1b !important;
+}
+
 .adwindow-detailpane-tabbox .z-tab-selected span.z-tab-text {
 	cursor: pointer;
 }
