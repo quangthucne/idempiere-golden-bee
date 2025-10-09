@@ -27,14 +27,12 @@
 }
 .z-panel-icon {
 	font-size: 10px !important;
-    color: rgb(0 0 0 / 57%) !important;
-    margin: 4px 0 0 0 !important;
-    line-height: 24px !important;
     border: 0px !important;
     border-radius: 0px !important;
 }
 .z-panel-icon:hover {
     color: rgb(0 0 0 / 100%) !important;
+	background: #fbcb1b !important;
 }
 
 <%-- dashboard widget --%>
@@ -52,9 +50,7 @@
 .dashboard-widget > .z-panel-body {
 	flex-grow: 1;
 }
-.dashboard-widget.z-panel {
-	border: 1px solid rgba(0, 0, 0, 0.09);
-}
+
 .dashboard-widget {
 	margin-top: 1px; 
 	margin-left: auto; 

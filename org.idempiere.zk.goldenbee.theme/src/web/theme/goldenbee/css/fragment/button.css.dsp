@@ -10,10 +10,10 @@
 .z-button-os {
 	border-radius: 4px;
 }
-.z-button-os:hover {
+.z-button-os:hover, .z-button-os:active {
     color: #FFFFFF;
     border-color: transparent;
-    background-color: #7ac8ff;
+    background-color: #fbcb1b;
 }
 
 .z-button:focus {
@@ -83,6 +83,14 @@
 }
 .btn-ok.z-button [class^="z-icon-"]:before {
 	color: white;	
+}
+
+.btn-new, .btn-ok, .btn-small {
+	background: #fbcb1b !important;
+}
+
+.btn-reset {
+	background: #111111 !important;
 }
 
 .z-combobox-button, .z-bandbox-button, .z-datebox-button, .z-timebox-button,

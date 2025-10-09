@@ -6,6 +6,10 @@
 	line-height: 1.2em !important;
 	padding: 4px 2px !important;
 }
+
+.z-treerow.z-treerow-selected>.z-treecell {
+	background: #fbe79eff !important;
+}
 @media screen and (min-width: 768px) {
 	.z-treecell-content {
 		padding: 0px 1px;

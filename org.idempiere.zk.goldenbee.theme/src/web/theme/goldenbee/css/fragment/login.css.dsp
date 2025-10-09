@@ -122,29 +122,6 @@
 }
 
 /* Icons for input fields */
-.goldenbee-input-container.user-icon::before {
-    content: '👤';
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    z-index: 1;
-}
-
-.goldenbee-input-container.password-icon::before {
-    content: '🔒';
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    z-index: 1;
-}
-
-.goldenbee-input-container.language-icon::before {
-    content: '🌐';
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    z-index: 1;
-}
 
 /* Options Container */
 .goldenbee-options-container {

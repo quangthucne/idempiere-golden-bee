@@ -2,13 +2,13 @@
 <%@ taglib uri="http://www.idempiere.org/dsp/web/util" prefix="u" %>
 <%-- z-grid customization --%>
 .z-grid .z-column, .z-listheader {
-	background-color: #e0f2ff;
+	background-color: #f3e2a1ff;
 	border-left: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 }
 
 .z-grid-header {
-	background-color: #e0f2ff;
+	background-color: #f3e2a1ff;
 }
 
 .z-grid tbody tr.grid-inactive-row td.z-cell {
@@ -89,7 +89,7 @@ div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 }
 
 .z-listheader-sort .z-listheader-content:active, .z-column-sort .z-column-content:active  {
-    background: #C7E8FF;
+    background: #f3e2a1ff;
     color: #000;
 }
 
@@ -117,7 +117,7 @@ div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 
 <%-- z-listbox customization --%>
 .z-listbox-header {
-	background-color: #e0f2ff;
+	background-color: #f3e2a1ff;
 	border-left: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 }
@@ -152,4 +152,10 @@ div.grid-view-color-fieldtype-display {
 div.grid-view-color-fieldtype-display > div {
 	width: 95%;
 	height: 80%;
+}
+
+/* GoldenBee: Style for selected items in lists and grids */
+.z-listitem.z-listitem-selected > .z-listcell,
+.z-listitem.z-listitem-selected > .z-listcell > .z-listcell-content {
+    background: #f3e2a1ff !important;
 }

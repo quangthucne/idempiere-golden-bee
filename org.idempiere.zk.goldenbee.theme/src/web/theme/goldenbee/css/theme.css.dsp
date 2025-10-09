@@ -8,7 +8,7 @@ html,body {
 	padding: 0;
 	height: 100%;
 	width: 100%;
-	background-color: #D4E3F4;
+	background-color: #fafafa;
 	color: #333;
 	font-family: "Roboro",-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 	overflow: hidden;
@@ -32,12 +32,12 @@ html,body {
 }
 @media screen and (max-device-width: 2499px) {
 	[class*="z-"]:not([class*="z-icon-"]):not([class*="z-group-icon-"]) {
-		font-size: 13px;
+		font-size: 14px;
 	}
 }
 @media screen and (max-device-width: 1899px) {
 	[class*="z-"]:not([class*="z-icon-"]):not([class*="z-group-icon-"]) {
-		font-size: 12px;
+		font-size: 14px;
 	}
 }
 @media screen and (max-device-width: 1399px) {

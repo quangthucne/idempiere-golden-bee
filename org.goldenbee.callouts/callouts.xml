@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<callouts>
+    <callout model="Z_InOutLine" method="org.idempiere.callout.Z_BarcodeScanner.barcodeScanned">
+        <param name="ColumnName">ScanBarcode</param>
+    </callout>
+</callouts>
