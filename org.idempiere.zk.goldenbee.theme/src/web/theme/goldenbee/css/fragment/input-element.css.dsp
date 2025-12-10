@@ -58,7 +58,6 @@ input:focus, textarea:focus, .z-combobox-input:focus, z-datebox-input:focus, sel
 .z-datebox-input, .z-datebox-button, .z-timebox-input, .z-timebox-button,
 .z-combobox-input, .z-combobox-button {
 	border: 1px solid #ECECEC;
-	font-size: 16px !important;
 }
 
 .z-combobox-input {
